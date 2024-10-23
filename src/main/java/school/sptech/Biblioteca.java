@@ -72,9 +72,9 @@ public class Biblioteca {
 
     public List<Livro> retornarTopCincoLivros(){
         List<Livro> livroAntes = livros.stream()
-                .sorted(Comparator.comparingDouble(Livro :: calcularMediaAvaliacoes))
+                .sorted(Comparator.comparingDouble(Livro :: calcularMediaAvaliacoes).reversed())
                 .limit(5)
-                .toList().reversed();
+                .toList();
         return livroAntes;
     }
 
