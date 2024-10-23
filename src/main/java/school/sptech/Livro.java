@@ -14,6 +14,7 @@ public class Livro {
     private List<Avaliacao> avaliacoes;
 
     public Livro() {
+        this.avaliacoes = new ArrayList<>();
     }
 
     public Livro(String titulo, String autor, LocalDate dataPublicacao) {
